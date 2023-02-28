@@ -34,7 +34,7 @@ export const updateAction = async ({ request, params }) => {
     usState: formData.get("usState"),
   };
 
-  await fetch(URL + `${params.id}/`, {
+  await fetch(URL + `/contacts/${params.id}/`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -46,7 +46,7 @@ export const updateAction = async ({ request, params }) => {
 };
 
 export const deleteAction = async ({ params }) => {
-  await fetch(URL + `${params.id}/`, {
+  await fetch(URL + `/contacts/${params.id}/`, {
     method: "DELETE",
   });
 

@@ -32,7 +32,7 @@ function Show() {
         <button> Update Contact</button>
       </Form>
       <Form action={`/delete/${contact.id}`} method="POST">
-        <button>Delete</button>
+        <button>Delete Contact</button>
       </Form>
       <Link to="/">Back To Main Page</Link>
     </section>
