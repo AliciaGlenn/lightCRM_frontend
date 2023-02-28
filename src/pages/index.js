@@ -6,10 +6,12 @@ function Index() {
   return (
     <div>
       <h1>My Contacts</h1>
-      <ul>
+      <ul style={{ listStyle: "none" }}>
         {contacts.map((contact) => (
           <Link to={`/${contact.id}`}>
-            <li>{contact.companyName}</li>
+            <li>
+              <h3>{contact.companyName}</h3>
+            </li>
           </Link>
         ))}
       </ul>
