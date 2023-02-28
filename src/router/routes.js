@@ -6,6 +6,7 @@ import {
 import App from "../App";
 import Index from "../pages";
 import { indexLoader } from "./loaders";
+import { createAction } from "./actions";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -13,7 +14,7 @@ const router = createBrowserRouter(
       <Route path="/" element={<App />}>
         <Route path="" element={<Index />} loader={indexLoader} />
         <Route path="/:id" />
-        <Route path="/create" />
+        <Route path="/create" action={createAction} />
         <Route path="/update/:id" />
         <Route path="/delete/:id" />
       </Route>
