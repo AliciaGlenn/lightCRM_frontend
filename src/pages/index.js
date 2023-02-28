@@ -16,7 +16,7 @@ function Index() {
       <h2>Create a Contact</h2>
       <Form action="/create" method="POST">
         <input type="text" name="companyName" placeholder="Company Name" />
-        <input type="text" name="Person" placeholder="Point of Contact" />
+        <input type="text" name="person" placeholder="Point of Contact" />
         <input type="text" name="personTitle" placeholder="Title" />
         <input type="text" name="emailAddress" placeholder="Email Address" />
         <input type="text" name="usState" placeholder="State" />
