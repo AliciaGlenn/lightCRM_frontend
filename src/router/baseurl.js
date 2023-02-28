@@ -1,1 +1,3 @@
-export default "http://localhost:8000/contacts/";
+const URL = "https://crm-backend-6894.onrender.com";
+
+export default URL;
