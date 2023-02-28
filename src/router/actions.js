@@ -22,3 +22,25 @@ export const createAction = async ({ request }) => {
 
   return redirect("/");
 };
+
+export const updateAction = async ({ request, params }) => {
+  const formData = await request.formData();
+
+  const updateContact = {
+    companyName: formData.get("companyName"),
+    person: formData.get("person"),
+    personTitle: formData.get("personTitle"),
+    emailAddress: formData.get("emailAddress"),
+    usState: formData.get("usState"),
+  };
+
+  await fetch(URL + `${params.id}/`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(updateContact),
+  });
+
+  return redirect("/");
+};
