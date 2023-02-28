@@ -1,4 +1,7 @@
-import URL from "./baseurl";
+//import URL from "./baseurl";
+
+// YOUR DEPLOYED API BASE URL
+const URL = "https://crm-backend-6894.onrender.com";
 
 export const indexLoader = async () => {
   const response = await fetch(URL);
