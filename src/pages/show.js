@@ -31,6 +31,9 @@ function Show() {
         <input type="text" name="usState" defaultValue={contact.usState} />
         <button> Update Contact</button>
       </Form>
+      <Form action={`/delete/${contact.id}`} method="POST">
+        <button>Delete</button>
+      </Form>
       <Link to="/">Back To Main Page</Link>
     </section>
   );

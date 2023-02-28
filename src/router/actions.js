@@ -44,3 +44,11 @@ export const updateAction = async ({ request, params }) => {
 
   return redirect("/");
 };
+
+export const deleteAction = async ({ params }) => {
+  await fetch(URL + `${params.id}/`, {
+    method: "DELETE",
+  });
+
+  return redirect("/");
+};

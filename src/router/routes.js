@@ -6,7 +6,7 @@ import {
 import App from "../App";
 import Index from "../pages";
 import { indexLoader, showLoader } from "./loaders";
-import { createAction, updateAction } from "./actions";
+import { createAction, deleteAction, updateAction } from "./actions";
 import Show from "../pages/show";
 
 const router = createBrowserRouter(
@@ -17,7 +17,7 @@ const router = createBrowserRouter(
         <Route path="/:id" element={<Show />} loader={showLoader} />
         <Route path="/create" action={createAction} />
         <Route path="/update/:id" action={updateAction} />
-        <Route path="/delete/:id" />
+        <Route path="/delete/:id" action={deleteAction} />
       </Route>
     </>
   )
