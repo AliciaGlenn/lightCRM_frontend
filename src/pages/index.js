@@ -14,7 +14,7 @@ function Index() {
         ))}
       </ul>
       <h2>Create a Contact</h2>
-      <Form action="/create" method="POST">
+      <Form action="/create" method="post">
         <input type="text" name="companyName" placeholder="Company Name" />
         <input type="text" name="person" placeholder="Point of Contact" />
         <input type="text" name="personTitle" placeholder="Title" />
